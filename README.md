@@ -6,7 +6,7 @@ After trying both golden-ratio.el and zoom.el, both of which break in one way or
 ## How to use
 In .doom.d/packages.el:
 
-   (package! doom-golden-ratio :recipe (:host github :repo "paulalesius/doom-golden-ratio"))
+    (package! doom-golden-ratio :recipe (:host github :repo "paulalesius/doom-golden-ratio"))
 
 In .doom.d/config.el:
 
