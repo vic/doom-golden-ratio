@@ -38,8 +38,7 @@
         (new-height (truncate (/ total-height ratio)))
         (new-width (truncate (/ total-width ratio))))
     (evil-window-set-height new-height)
-    (evil-window-set-width new-width)
-    (message "test on window change. Height: %s %s %s %s %s" height width total-height total-width new-height)))
+    (evil-window-set-width new-width)))
 
 (defun doom-golden-ratio ()
    "Determines first whether it is running in a graphical session."
