@@ -14,8 +14,8 @@
 ;;; Commentary:
 ;;
 ;;; Code:
-(eval-when-compile (require 'evil))
-(eval-when-compile (require 'core-lib))
+(require 'evil)
+(require 'core-lib)
 
 (defgroup doom-golden-ratio nil
   "Resize windows to golden ratio."
@@ -31,6 +31,7 @@
     (evil-window-set-height new-height)
     (evil-window-set-width new-width)))
 
+;;;#autoload
 (defun doom-golden-ratio ()
    "Determines first whether it is running in a graphical session."
    ;; Skip when the current window is the root window
