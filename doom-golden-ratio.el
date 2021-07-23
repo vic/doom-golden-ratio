@@ -38,6 +38,7 @@
      (unless (display-graphic-p)
        (doom-golden-ratio-term))))
 
+;;;#autoload
 (define-minor-mode doom-golden-ratio-mode
   "Doom golden ratio mode."
   :group 'doom-golden-ratio
