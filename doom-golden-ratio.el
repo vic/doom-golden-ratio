@@ -1,4 +1,4 @@
-;;; golden-ratio-ng.el -- Golden Ration NG -*- lexical-binding: t; -*-
+;;; golden-ratio-ng.el -- Doom Golden Ration -*- lexical-binding: t; -*-
 ;;
 ;; Copyright (C) 2021 Paul Alesius
 ;;
@@ -7,15 +7,9 @@
 ;; Created: July 22, 2021
 ;; Modified: July 22, 2021
 ;; Version: 0.0.1
-;; Keywords: Symbol’s value as variable is void: finder-known-keywords
-;; Homepage: https://github.com/paulalesius/golden-ratio-ng
+;; Keywords: emacs script
+;; Homepage: https://github.com/paulalesius/doom-golden-ratio
 ;; Package-Requires: ((emacs "24.3"))
-;;
-;; This file is not part of GNU Emacs.
-;;
-;;; Commentary:
-;;
-;;
 ;;
 ;;; Code:
 (provide 'doom-golden-ratio)
