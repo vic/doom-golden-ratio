@@ -1,4 +1,4 @@
-;;; golden-ratio-ng.el -- Doom Golden Ration -*- lexical-binding: t; -*-
+;;; doom-golden-ratio.el -- Doom Golden Ration -*- lexical-binding: t; -*-
 ;;
 ;; Copyright (C) 2021 Paul Alesius
 ;;
@@ -11,22 +11,16 @@
 ;; Homepage: https://github.com/paulalesius/doom-golden-ratio
 ;; Package-Requires: ((emacs "24.3"))
 ;;
+;;; Commentary:
+;;
 ;;; Code:
 (provide 'doom-golden-ratio)
 (require 'evil)
 (require 'core-lib)
 
-(defgroup)
-(defcustom window-size-ratio
-  "The desired size ratio of the active window."
-  :group 'golden-ratio
-  :type 'float)
-
-(defun golden-ratio-ng-term ()
+(defun doom-golden-ratio-term ()
   "Called on window change."
   (let* ((ratio 1.618)
-        (height (window-height))
-        (width (window-width))
         (total-height (- (frame-height) 1))
         (total-width (- (frame-width) 1))
         (new-height (truncate (/ total-height ratio)))
