@@ -1,4 +1,4 @@
-;;; doom-golden-ratio.el -- Doom Golden Ration -*- lexical-binding: t; -*-
+;;; doom-golden-ratio.el --- Doom Golden Ration -*- lexical-binding: t; -*-
 ;;
 ;; Copyright (C) 2021 Paul Alesius
 ;;
@@ -14,8 +14,8 @@
 ;;; Commentary:
 ;;
 ;;; Code:
-(require 'evil)
-(require 'core-lib)
+(eval-when-compile (require 'evil))
+(eval-when-compile (require 'core-lib))
 
 (defgroup doom-golden-ratio nil
   "Resize windows to golden ratio."
