@@ -14,9 +14,12 @@
 ;;; Commentary:
 ;;
 ;;; Code:
-(provide 'doom-golden-ratio)
 (require 'evil)
 (require 'core-lib)
+
+(defgroup doom-golden-ratio nil
+  "Resize windows to golden ratio."
+  :group 'windows)
 
 (defun doom-golden-ratio-term ()
   "Called on window change."
@@ -35,6 +38,14 @@
      (unless (display-graphic-p)
        (doom-golden-ratio-term))))
 
-(remove-hook! 'doom-switch-window-hook #'doom-golden-ratio)
-(add-hook! 'doom-switch-window-hook #'doom-golden-ratio)
+(define-minor-mode doom-golden-ratio-mode
+  "Doom golden ratio mode."
+  :group 'doom-golden-ratio
+  :lighter " Golden"
+  :global 't
+  (if doom-golden-ratio-mode
+      (add-hook! 'doom-switch-window-hook #'doom-golden-ratio)
+    (remove-hook! 'doom-switch-window-hook #'doom-golden-ratio)))
+
+(provide 'doom-golden-ratio)
 ;;; doom-golden-ratio.el ends here
