@@ -35,9 +35,12 @@
 (defun doom-golden-ratio ()
    "Determines first whether it is running in a graphical session."
    ;; Skip when the current window is the root window
-   (unless (eq (frame-root-window) (get-buffer-window))
-   ;  (unless (display-graphic-p)
-       (doom-golden-ratio-term))) ;;)
+   (unless (or
+            (window-minibuffer-p)
+            (window-fixed-size-p)
+            (eq (frame-root-window) (get-buffer-window))
+            )
+       (doom-golden-ratio-term)))
 
 ;;;#autoload
 (define-minor-mode doom-golden-ratio-mode
